@@ -1,17 +1,17 @@
 {% extends "shop/base.html" %}
 {% load static %}
-{% block title %}Your shopping cart{% endblock %}
+{% block title %}Ваша корзина{% endblock %}
 {% block content %}
-    <h1>Your shopping cart</h1>
+    <h1>Ваша корзина</h1>
     <table class="cart">
         <thead>
             <tr>
-                <th>Image</th>
-                <th>Product</th>
-                <th>Quantity</th>
-                <th>Remove</th>
-                <th>Unit price</th>
-                <th>Price</th>
+                <th>Изображение</th>
+                <th>Товар</th>
+                <th>Количество</th>
+                <th>Удалить</th>
+                <th>Цена за единицу</th>
+                <th>Итоговая цена</th>
             </tr>
         </thead>
         <tbody>
@@ -48,7 +48,7 @@
         </tbody>
     </table>
     <p class="text-right">
-        <a href="{% url 'shop:product_list' %}" class="button light">Continue shopping</a>
+        <a href="{% url 'shop:product_list' %}" class="button light">Продолжить шопиться</a>
         <a href="#" class="button">Checkout</a>
     </p>
 {% endblock %}
