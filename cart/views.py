@@ -40,6 +40,17 @@ def cart_detail(request):
     Обработчик отображения корзины
     '''
     cart = Cart(request)
+
+    # Добавление объекта формы для каждого товара в корзине
+    # чтобы пользователь мог сохранить новое количество единиц
+    for item in cart:
+        item['update_quantity_form'] = CartAddProductForm(
+            initial={
+                'quantity': item['quantity'],
+                'update': True
+            }
+        )
+
     return render(
         request,
         'cart/detail.html',

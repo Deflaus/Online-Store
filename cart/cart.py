@@ -38,7 +38,7 @@ class Cart(object):
         '''
         Помечаем сессию как измененную
         '''
-        self.session.modifed = True
+        self.session.modified = True
     
     def remove(self, product):
         '''
@@ -64,7 +64,7 @@ class Cart(object):
             item['price'] = Decimal(item['price']) # Добавление элемента цены за один товар в содержимое товара в виде decimal
             item['total_price'] = item['price'] * item['quantity'] # Добавление цены за все количество в содержимое товара
         
-        yield item
+            yield item
     
     def __len__(self):
         '''
