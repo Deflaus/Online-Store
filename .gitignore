@@ -2,4 +2,6 @@
 /shop/migrations/__pycache__
 /cart/__pycache__
 /cart/migrations/__pycache__
+/orders/__pycache__
+/orders/migrations/__pycache__
 /myshop/__pycache__
