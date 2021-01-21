@@ -3,6 +3,9 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 
 
 class Coupon(models.Model):
+    '''
+    Модель купона
+    '''
     code = models.CharField(max_length=50, unique=True) # код купона
     valid_from = models.DateTimeField() # дата и время начала действия купона
     valid_to = models.DateTimeField() # дата и время окончания действия купона
