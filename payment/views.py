@@ -4,6 +4,9 @@ from orders.models import Order
 
 
 def process(request):
+    '''
+    Обработчик процесса оплаты
+    '''
     order_id = request.session.get('order_id')
     # Заказ по добавленному в order_create после оформления
     # покупателем заказа ключу order_id из сессии
@@ -46,6 +49,9 @@ def process(request):
 
 
 def done(request):
+    '''
+    Обработчик успешной оплаты
+    '''
     return render(
         request,
         'payment/done.html',
@@ -53,6 +59,9 @@ def done(request):
 
 
 def canceled(request):
+    '''
+    Обработчик неуспешной оплаты
+    '''
     return render(
         request,
         'payment/canceled.html',
